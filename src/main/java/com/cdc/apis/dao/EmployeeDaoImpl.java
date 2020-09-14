@@ -26,7 +26,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public int insertEmployee(Employee emp) {
-		final String sql = "insert into employee(employeeId, employeeName , employeeAddress,employeeEmail) values(:employeeId,:employeeName,:employeeEmail,:employeeAddress)";
+		final String sql = "insert into employee(employeeId, employeeName , employeeEmail, employeeAddress) values(:employeeId,:employeeName,:employeeEmail,:employeeAddress)";
 		KeyHolder holder = new GeneratedKeyHolder();
 		SqlParameterSource param = new MapSqlParameterSource().addValue("employeeId", emp.getEmployeeId())
 				.addValue("employeeName", emp.getEmployeeName()).addValue("employeeEmail", emp.getEmployeeEmail())
